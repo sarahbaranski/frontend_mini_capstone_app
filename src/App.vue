@@ -4,6 +4,16 @@
       <router-link to="/">Home</router-link>
       |
       <router-link to="/about">About</router-link>
+      |
+      <router-link to="/signup">Signup</router-link>
+      |
+      <router-link to="/signup">Login</router-link>
+      |
+      <router-link to="/signup">Logout</router-link>
+      |
+      <router-link to="/products">All Products</router-link>
+      |
+      <router-link to="/products/new">New Product</router-link>
     </div>
     <router-view />
   </div>

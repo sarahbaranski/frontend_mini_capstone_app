@@ -6,6 +6,7 @@ import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import ProductsIndex from "../views/ProductsIndex.vue";
 import ProductsNew from "../views/ProductsNew.vue";
+import ProductsEdit from "../views/ProductsEdit.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,7 @@ const routes = [
   { path: "/logout", name: "logout", component: Logout },
   { path: "/products", name: "products-index", component: ProductsIndex },
   { path: "/products/new", name: "products-new", component: ProductsNew },
+  { path: "/products/:id/edit", name: "products-edit", component: ProductsEdit },
 ];
 
 const router = new VueRouter({

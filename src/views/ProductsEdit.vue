@@ -21,6 +21,7 @@
       <input type="text" v-model="product.image" />
       <br />
       <input type="submit" value="Update" />
+      <router-link to="/products">Back to all Products</router-link>
     </form>
   </div>
 </template>

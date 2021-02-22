@@ -3,12 +3,8 @@
     <h1>All Products</h1>
     <div v-for="product in products" v-bind:key="product.id">
       <h2>{{ product.name }}</h2>
-      <p>{{ product.price }}</p>
-      <p>{{ product.description }}</p>
       <img v-bind:src="product.primary_image_url" alt="" />
-      <router-link v-bind:to="`/products/${product.id}/edit`">Edit Product</router-link>
-      <button v-on:click="destoryProduct(product)">Destroy product</button>
-      <router-link to="/products">Back to all Products</router-link>
+      <router-link v-bind:to="`/products/${product.id}`">More details</router-link>
     </div>
   </div>
 </template>
@@ -34,13 +30,6 @@ export default {
       this.products = response.data;
     });
   },
-  methods: {
-    destroyProduct: function(product) {
-      axios.delete("/api/products/" + product.id).then(response => {
-        console.log("products destory", response);
-        this.$router.push("/products");
-      });
-    },
-  },
+  methods: {},
 };
 </script>

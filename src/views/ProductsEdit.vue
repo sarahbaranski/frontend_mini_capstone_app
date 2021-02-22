@@ -2,19 +2,25 @@
   <div class="products-edit">
     <h1>Edit Product</h1>
     <form v-on:sumbit.prevent="updateProduct(product)">
-      <ul>
+      <!-- <ul>
         <li :v-for="error in errors">{{ error }}</li>
-      </ul>
+      </ul> -->
       Name:
       <input type="text" v-model="product.name" />
+      <br />
       Price:
       <input type="text" v-model="product.price" />
+      <br />
       Description:
       <input type="text" v-model="product.description" />
+      <br />
       Supplier Id:
       <input type="text" v-model="product.supplierId" />
+      <br />
       Image Url:
       <input type="text" v-model="product.image" />
+      <br />
+      <input type="submit" value="Update" />
     </form>
   </div>
 </template>
@@ -26,7 +32,7 @@ export default {
   data: function() {
     return {
       product: {},
-      erros: [],
+      // erros: [],
     };
   },
   created: function() {
